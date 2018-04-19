@@ -79,9 +79,9 @@ public class SearchTree {
                 successorsQueue.enqueue(child);
 
             }
-            // Add the queue that contains the successors of the visted node to the beginning of the main queue
+            // Add the queue that contains the successors of the visited node to the beginning of the main queue
             mainQueue.addQueue(successorsQueue);
-            // Successors queue should be cleared in order to store the next expaneded's successors
+            // Successors queue should be cleared in order to store the next expanded's successors
             successorsQueue.clear();
             currentNode = mainQueue.dequeue();
             time += 1;
@@ -92,7 +92,7 @@ public class SearchTree {
 
     /*
      * Depth First Search (with Iterative Deepening)
-     * The depth limit starts from 1 and it increases to the defiend value by user that passed to the method
+     * The depth limit starts from 1 and it increases to the defined value by user that passed to the method
      * */
     public void iterativeDeepening(int depthLimit) {
         System.out.println(">>> Depth First Search (with Iterative Deepening)\n");
@@ -113,7 +113,7 @@ public class SearchTree {
             Node node = new Node(root.getState());
             mainQueue.enqueue(node);
             currentNode = node;
-            List<String> nodeSuccessors = null;
+            List<String> nodeSuccessors;
             stateSets.add(currentNode.getState());
             while (!mainQueue.isEmpty()) {
                 currentNode = mainQueue.dequeue();
@@ -137,9 +137,9 @@ public class SearchTree {
                         successorsQueue.enqueue(child);
 
                     }
-                    //we add the queue that contains the successors of the visted node to the beginning of the main queue
+                    // Add the queue that contains the successors of the visited node to the beginning of the main queue
                     mainQueue.addQueue(successorsQueue);
-                    //successors queue should be cleared in order to store the next expaneded's successors
+                    // Successors queue should be cleared in order to store the next expanded's successors
                     successorsQueue.clear();
                 }
             }

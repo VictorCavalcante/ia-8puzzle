@@ -5,9 +5,8 @@ import br.ic.ufal.ia.puzzle.SearchTree;
 
 public class App {
     final static private String GOAL_STATE = "123804765";
-    final static private String INITIAL_STATE = "134862705";
-//    final static private String INITIAL_STATE = "281043765";
-//    final static private String INITIAL_STATE = "567408321";
+    final static private String INITIAL_STATE = "281043765";
+//    final static private String INITIAL_STATE = "567408321"; // Worst case (reversed)
 
     public static void main(String[] args) {
         SearchTree search = new SearchTree(new Node(INITIAL_STATE), GOAL_STATE);
